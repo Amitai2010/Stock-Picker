@@ -20,8 +20,11 @@ def stock_picker(arr)
 
     
     end
-
-    return [best_buy_idx, best_sell_idx]
+    if profit == 0
+        puts "You probably shouldent buy this time around..."
+    end
+    return "you should buy at day " + best_buy_idx.to_s + " and sell at day " + best_sell_idx.to_s + " for maximum profit :)"
 end
 
-puts stock_picker([17,3,6,9,15,8,6,1,10])
+arr = [17,3,6,9,15,8,6,1,10]
+puts stock_picker(arr)
